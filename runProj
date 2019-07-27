@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+cat README
+make
+
+./mipssim -i test1.bin -o x1
+./mipssim -i test2.bin -o x2
+./mipssim -i test3.bin -o x3
+diff -wBbs test1_dis.txt x1_dis.txt
+diff -wBbs test2_dis.txt x2_dis.txt
+diff -wBbs test3_dis.txt x3_dis.txt
+diff -wBbs test1_sim.txt x1_sim.txt
+diff -wBbs test2_sim.txt x2_sim.txt
+diff -wBbs test3_sim.txt x3_sim.txt
+
+

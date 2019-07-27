@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+python mips1.py $@
+
